@@ -1,0 +1,2 @@
+module StudyGoalsHelper
+end
