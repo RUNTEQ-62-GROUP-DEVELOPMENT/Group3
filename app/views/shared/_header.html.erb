@@ -1,1 +1,41 @@
-<h1>RUNTEQ_62期</h1>
+<head>
+  <style>
+    .nav-link {opacity: 0.70;}
+    .nav-link:hover {opacity: 1;}
+  </style>
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-light bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="<%= asset_path('bootstrap-logo.gif') %>"style="height: 40px;">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-5">
+            <a class="nav-link active fw-bold" aria-current="page" href="#">マイページ</a>
+          </li>
+          <li class="nav-item ms-5">
+            <a class="nav-link active fw-bold" aria-current="page" href="#">入力フォーム</a>
+          </li>
+          <li class="nav-item ms-5">
+            <a class="nav-link active fw-bold" aria-current="page" href="#">目標設定</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown ml-auto">
+      <button class="btn btn-link" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="<%= asset_path('default-user-icon.jpg') %>" alt="ユーザーアイコン" style="height: 50px; width: 50px;" class="rounded-circle">
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+          <%= link_to 'ユーザー設定', '', class: 'dropdown-item' %>
+        </li>
+        <li>
+          <%= link_to 'ログアウト', '', method: :delete, class: 'dropdown-item' %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
