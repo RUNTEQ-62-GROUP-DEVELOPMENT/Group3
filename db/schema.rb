@@ -10,5 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_28_105647) do
+  create_table "goals", charset: "utf8mb4", force: :cascade do |t|
+    t.date "end_date", null: false
+    t.string "target", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_goals_on_user_id"
+  end
+
+  create_table "records", charset: "utf8mb4", force: :cascade do |t|
+    t.decimal "study_time", precision: 10, null: false
+    t.string "title", null: false
+    t.date "date", null: false
+    t.text "details", null: false
+    t.bigint "user_id", null: false
+    t.bigint "goal_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["goal_id"], name: "index_records_on_goal_id"
+    t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "goals", "users"
+  add_foreign_key "records", "goals"
+  add_foreign_key "records", "users"
 end
