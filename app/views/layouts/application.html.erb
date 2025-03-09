@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="d-flex flex-column" style = "min-height: 100vh; background-color: #e6f5eb;">
-      <%= render 'shared/header' %>
-      <%#= render 'shared/before_login_header' %>
+  <body class="d-flex flex-column">
+    <%= render 'shared/header' %>
+    <%#= render 'shared/before_login_header' %>
     <%# end %>
     <%#= render 'shared/flash_message' %>
     <%= yield %>

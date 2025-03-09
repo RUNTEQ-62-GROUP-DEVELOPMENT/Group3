@@ -14,28 +14,29 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item ms-5">
-            <a class="nav-link active fw-bold" aria-current="page" href="#">マイページ</a>
+            <a class="nav-link" href="#">マイページ</a>
           </li>
           <li class="nav-item ms-5">
-            <a class="nav-link active fw-bold" aria-current="page" href="#">入力フォーム</a>
+            <a class="nav-link" href="#">入力フォーム</a>
           </li>
           <li class="nav-item ms-5">
-            <a class="nav-link active fw-bold" aria-current="page" href="#">目標設定</a>
+            <a class="nav-link" href="#">目標設定</a>
           </li>
         </ul>
       </div>
-      <div class="dropdown ml-auto">
-      <button class="btn btn-link" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="<%= asset_path('default-user-icon.jpg') %>" alt="ユーザーアイコン" style="height: 50px; width: 50px;" class="rounded-circle">
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li>
-          <%= link_to 'ユーザー設定', '', class: 'dropdown-item' %>
-        </li>
-        <li>
-          <%= link_to 'ログアウト', '', method: :delete, class: 'dropdown-item' %>
-        </li>
-      </ul>
+      <div class="dropdown ms-auto">
+        <button class="btn btn-link" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="<%= asset_path('default-user-icon.jpg') %>" alt="ユーザーアイコン" style="height: 50px; width: 50px;" class="rounded-circle">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <%= link_to 'ユーザー設定', '#', class: 'dropdown-item' %>
+          </li>
+          <li>
+            <%= link_to 'ログアウト', '#', method: :delete, class: 'dropdown-item' %>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
